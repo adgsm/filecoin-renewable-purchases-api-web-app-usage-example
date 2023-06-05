@@ -1,0 +1,43 @@
+{
+	"name": "@filecoin-renewable-energy-purchases/js-api-web-app-example",
+	"version": "0.0.1",
+	"description": "@filecoin-renewable-energy-purchases/js-api how to use in web app example",
+	"type": "module",
+	"author": {
+		"name": "Momcilo Dzunic",
+		"email": "momcilo.dzunic@protocol.ai"
+	},
+	"scripts": {
+		"clean": "rimraf ./dist",
+		"build": "webpack --env production",
+		"serve": "webpack serve --hot=only --mode=development",
+		"start": "npm run serve"
+	},
+	"browserslist": [
+		"last 1 Chrome version"
+	],
+	"dependencies": {
+		"@filecoin-renewable-energy-purchases/js-api": "^0.0.1"
+	},
+	"devDependencies": {
+		"@babel/plugin-syntax-dynamic-import": "^7.8.3",
+		"@babel/plugin-transform-runtime": "^7.22.4",
+		"@babel/preset-env": "^7.22.4",
+		"@vue/compiler-sfc": "^3.3.4",
+		"babel-loader": "^9.1.2",
+		"css-loader": "^6.8.1",
+		"html-webpack-plugin": "^5.5.1",
+		"mini-css-extract-plugin": "^2.7.6",
+		"sass": "^1.62.1",
+		"sass-loader": "^13.3.1",
+		"source-map-loader": "^4.0.1",
+		"vue": "^3.3.4",
+		"vue-loader": "^17.2.2",
+		"vue-router": "^4.2.2",
+		"vuex": "^4.1.0",
+		"webpack": "^5.85.0",
+		"webpack-cli": "^5.1.1",
+		"webpack-dev-server": "^4.15.0",
+		"webpack-remove-empty-scripts": "^1.0.3"
+	}
+}

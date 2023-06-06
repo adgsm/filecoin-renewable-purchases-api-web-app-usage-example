@@ -6,6 +6,7 @@ const { VueLoaderPlugin } = require('vue-loader');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const Dotenv = require('dotenv-webpack')
 
 const paths = {
 	root: path.resolve(__dirname, './'),
@@ -67,7 +68,8 @@ const common = {
 			template: paths.public + '/index.html', // template file
 			filename: 'index.html', // output file,
 			minify: false
-		})
+		}),
+		new Dotenv()
 	],
 	resolve: {
 		alias: {

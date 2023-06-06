@@ -31,6 +31,12 @@ const mounted = async function() {
 	 * parameters: ()
 	 */
 	await this.printOutCertificatesAndAttestations()
+
+	/**
+	 * Get contracts and allocations from Github and print them out
+	 * parameters: ()
+	 */
+	await this.printOutContractsAndAllocationsFromGithub()
 }
 
 const methods = {
@@ -69,6 +75,10 @@ const methods = {
 
 		// Print out all contracts and allocations
 		console.log(this.certificatesAndAttestations)
+	},
+	async printOutContractsAndAllocationsFromGithub() {
+		const contractsAndAllocationsObj = await this.renewableEnergyPurchases.getContractsAndAllocationsFromGithub()
+		console.log(contractsAndAllocationsObj)
 	}
 }
 

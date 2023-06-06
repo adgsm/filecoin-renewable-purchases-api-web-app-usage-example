@@ -1,5 +1,5 @@
 <template>
-	<div>jh vkuuv u u uvuiv u vuv uv uv</div>
+	<div>Check console for outputs</div>
 </template>
 
 <script src="@/src/js/example/example.js" scoped />

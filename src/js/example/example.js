@@ -43,6 +43,18 @@ const mounted = async function() {
 	 * parameters: ()
 	 */
 	await this.printOutAttestationsAndCertificatesFromGithub()
+
+	/**
+	 * Get all allocations from Github and print them out
+	 * parameters: ()
+	 */
+	await this.printOutAllAllocationsFromGithub()
+
+	/**
+	 * Get all certificates together with appertain attestations and matching allocations from Github and print them out
+	 * parameters: ()
+	 */
+	await this.printOutAllCertificateAllocationsFromGithub()
 }
 
 const methods = {
@@ -89,6 +101,14 @@ const methods = {
 	async printOutAttestationsAndCertificatesFromGithub() {
 		const attestationsAndCertificatesObj = await this.renewableEnergyPurchases.getAttestationsAndCertificatesFromGithub()
 		console.log(attestationsAndCertificatesObj)
+	},
+	async printOutAllAllocationsFromGithub() {
+		const allAllocationsObj = await this.renewableEnergyPurchases.getAllAllocationsFromGithub()
+		console.log(allAllocationsObj)
+	},
+	async printOutAllCertificateAllocationsFromGithub() {
+		const allCertificateAllocationsObj = await this.renewableEnergyPurchases.getAllCertificateAllocationsFromGithub()
+		console.log(allCertificateAllocationsObj)
 	}
 }
 
